@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Tyus Jones",
+    "image": "https://cdn.vox-cdn.com/thumbor/vfb1eKudH8EU7z3ciwxtlVg84ME=/0x0:4358x2904/1200x800/filters:focal(1831x1104:2527x1800)/cdn.vox-cdn.com/uploads/chorus_image/image/58023387/usa_today_10460773.0.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Karl Anthony Towns",
+    "image": "https://cdn.vox-cdn.com/thumbor/OcOhU2AsWnA7BQvnOf5yH8i-WdU=/0x0:4158x2773/1200x800/filters:focal(1725x486:2389x1150)/cdn.vox-cdn.com/uploads/chorus_image/image/58261597/usa_today_10532108.0.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Andrew Wiggins",
+    "image": "https://imagesvc.timeincapp.com/v3/fan/image?url=http://hoopshabit.com/wp-content/uploads/getty-images/2018/01/908114924-toronto-raptors-v-minnesota-timberwolves.jpg-850x560.jpg&c=sc&w=590&h=389"
+  },
+  {
+    "id": 4,
+    "name": "Jamaal Crawford",
+    "image": "https://images.complex.com/complex/images/c_limit,w_680/fl_lossy,pg_1,q_auto/vhee5qzf6raatd023xlp/jamal-crawford-minnesota-timberwolves"
+  },
+  {
+    "id": 5,
+    "name": "Jeff Teague",
+    "image": "https://cdn.vox-cdn.com/thumbor/CYwk_eb3ig1qHJRI6cF2tvHulEY=/0x0:4479x2986/1200x800/filters:focal(1882x1135:2598x1851)/cdn.vox-cdn.com/uploads/chorus_image/image/58135443/usa_today_10442197.0.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Jimmy Butler",
+    "image": "http://images.performgroup.com/di/library/omnisport/2b/6f/jimmy-butler_lbqstuypcrhe12mb92b850hz8.jpg?t=-183288889&w=960&quality=70"
+  },
+  {
+    "id": 7,
+    "name": "Taj Gibson",
+    "image": "https://cdn.vox-cdn.com/thumbor/nhyV5HRJLRUKQeBwweAE9LR0Tww=/0x0:4214x2809/1200x800/filters:focal(1860x0:2534x674)/cdn.vox-cdn.com/uploads/chorus_image/image/57097727/859190662.0.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Lonzo Ball",
+    "image": "https://img.bleacherreport.net/img/images/photos/003/720/938/hi-res-9781486d2d8d2d5b8aed490001c93251_crop_north.jpg?h=533&w=800&q=70&crop_x=center&crop_y=top"
+  },
+  {
+    "id": 9,
+    "name": "Steph Curry",
+    "image": "https://cbsnews3.cbsistatic.com/hub/i/r/2017/11/16/283005d3-0976-4842-8dc0-ba9319b34255/thumbnail/620x350/d4bb975dabb290e4a4a611a23fef4ffe/ap-17304710366891.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Marcus Smart",
+    "image": "https://nesncom.files.wordpress.com/2018/02/marcus-smart6.jpg?w=640"
+  },
+  {
+    "id": 11,
+    "name": "Jalen Brown",
+    "image": "http://images.performgroup.com/di/library/omnisport/a3/65/brown-jaylen-usnews-getty-ftr_tsagqwrw4pa81dprg43i2igts.jpg?t=-941496889&w=960&quality=70"
+  },
+  {
+    "id": 12,
+    "name": "Gordon Hayward",
+    "image": "https://usatftw.files.wordpress.com/2018/01/gordon-hayward.jpg?w=1000&h=600&crop=1"
+  }
+]
