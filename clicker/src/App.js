@@ -10,7 +10,7 @@ import PlayerCard from "./Components/PlayerCard";
 
 
 class App extends Component {
-  // Setting this.state.friends to the friends json array
+  // Setting this.state.players to the players json array
   state = {
     players
   }
