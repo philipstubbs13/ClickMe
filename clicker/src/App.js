@@ -7,14 +7,17 @@ import Footer from "./Components/Footer";
 import Container from "./Components/Container";
 import players from "./players.json";
 import PlayerCard from "./Components/PlayerCard";
+import ScoreCounter from "./Components/ScoreCounter";
+import AlreadyClickedModal from "./Components/AlreadyClickedModal";
 
-
+let Message = "";
 
 class App extends Component {
   // Setting this.state.players to the players json array
   state = {
     players,
     count: 0,
+    Message
   }
 
 
@@ -37,6 +40,8 @@ class App extends Component {
 
     else {
       alert("You already clicked that player. Now you have to start over.");
+      this.setState({ Message: "You already clicked that player. Now you have to start over." });
+      console.log(Message);
       this.setState({ count: 0});
       for (let i = 0; i < players.length; i++) {
         players[i].clicked = "false";
@@ -60,10 +65,11 @@ class App extends Component {
   render() {
     return [
       <Navbar
-        count={this.state.count}
-        handleIncrement={this.handleIncrement}   
+        Message={this.state.Message}  
       />,
-      <Jumbotron />,
+      <Jumbotron 
+        count={this.state.count} 
+      />,
       <Container>
 
         <div className="row">
@@ -120,7 +126,8 @@ class App extends Component {
           </div>
         </div>
       </Container>,
-      <Footer />
+      <Footer />,
+      <AlreadyClickedModal />
     ];
   }
 }

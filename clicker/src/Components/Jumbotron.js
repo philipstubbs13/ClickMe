@@ -1,11 +1,10 @@
 import React from "react";
 
-const Jumbotron = () => (
+const Jumbotron = props => (
 
-    <div className="jumbotron bg-primary">
-        <div className="container text-center">
-            <h1 className="display-4 mt-5">ClickMe</h1>
-            <p className="lead">Click an image to earn points, but don't click an image more than once.</p>
+    <div className="jumbotron bg-light">
+        <div className="container mt-3">
+            <h2 className="scoreboard">Score: {props.count} Top Score: 0</h2>
         </div>
     </div>
 

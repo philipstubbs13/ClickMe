@@ -8,7 +8,7 @@ const Navbar = props => (
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
-            <h2 className="scoreboard text-white">Score: {props.count} Top Score: 0</h2>
+            <h3 className="game-message text-white">{props.Message}</h3>
         </div>
     </nav>
 );
