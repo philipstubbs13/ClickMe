@@ -7,14 +7,14 @@ import Footer from "./Components/Footer";
 import Container from "./Components/Container";
 import players from "./players.json";
 import PlayerCard from "./Components/PlayerCard";
-import ScoreCounter from "./Components/ScoreCounter";
+
 
 
 class App extends Component {
   // Setting this.state.players to the players json array
   state = {
     players,
-    count: 5
+    count: 0
   }
 
   // handleIncrement increases this.state.count by 1
@@ -26,17 +26,13 @@ class App extends Component {
 
   render() {
     return [
-      <Navbar />,
+      <Navbar
+        count={this.state.count}
+        handleIncrement={this.handleIncrement}   
+      />,
       <Jumbotron />,
       <Container>
-        <div className="row">
-          <div className="col-md-12">
-            <ScoreCounter 
-              count={this.state.count}
-              handleIncrement={this.handleIncrement} 
-            />
-          </div>
-        </div>
+
         <div className="row">
           <div className="col-md-3">
             {this.state.players.slice(0,3).map(player => (
@@ -45,6 +41,7 @@ class App extends Component {
                 key={player.id}
                 name={player.name}
                 image={player.image}
+                handleIncrement={this.handleIncrement}
               />
             ))}
           </div>
@@ -55,6 +52,7 @@ class App extends Component {
                 key={player.id}
                 name={player.name}
                 image={player.image}
+                handleIncrement={this.handleIncrement}
               />
             ))}
           </div>
@@ -65,6 +63,7 @@ class App extends Component {
                 key={player.id}
                 name={player.name}
                 image={player.image}
+                handleIncrement={this.handleIncrement}
               />
             ))}
           </div>
@@ -75,6 +74,7 @@ class App extends Component {
                 key={player.id}
                 name={player.name}
                 image={player.image}
+                handleIncrement={this.handleIncrement}
               />
             ))}
           </div>
