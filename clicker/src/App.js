@@ -14,19 +14,45 @@ class App extends Component {
   // Setting this.state.players to the players json array
   state = {
     players,
-    count: 0
+    count: 0,
   }
+
 
   // handleIncrement increases this.state.count by 1
   handleIncrement = () => {
-    // We always use the setState method to update a component's state
-    this.setState({ count: this.state.count + 1 });
+    console.log(players);
+  };
+
+  updatePlayerClickedValue = id => {
+    console.log(`${id}, clicked`);
+    //Filter this.state.players for player with an id not equal to the id being clicked
+    const clickedPlayer = this.state.players.filter(clickedPlayer => clickedPlayer.id === id);
+    console.log(clickedPlayer);
+    if (clickedPlayer[0].clicked === "false") {
+      clickedPlayer[0].clicked = "true";
+      console.log(clickedPlayer);
+      // We always use the setState method to update a component's state
+      this.setState({ count: this.state.count + 1 });
+    }
+
+    else {
+      alert("You already clicked that player. Now you have to start over.");
+      this.setState({ count: 0});
+      for (let i = 0; i < players.length; i++) {
+        players[i].clicked = "false";
+      }
+      console.log(players);
+      // We always use the setState method to update a component's state
+      this.setState({ count: 0});
+      console.log(players);
+    }
+
     //Randomize 
     //Every time an image is clicked, the images rendered to the page shuffle themselves in a random order.
     //https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
     for (let i = players.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1));
-        [players[i], players[j]] = [players[j], players[i]];
+      let j = Math.floor(Math.random() * (i + 1));
+      [players[i], players[j]] = [players[j], players[i]];
     }
   };
 
@@ -48,6 +74,7 @@ class App extends Component {
                 key={player.id}
                 name={player.name}
                 image={player.image}
+                updatePlayerClickedValue = {this.updatePlayerClickedValue}      
                 handleIncrement={this.handleIncrement}
               />
             ))}
@@ -59,6 +86,8 @@ class App extends Component {
                 key={player.id}
                 name={player.name}
                 image={player.image}
+                image={player.image}
+                updatePlayerClickedValue = {this.updatePlayerClickedValue}
                 handleIncrement={this.handleIncrement}
               />
             ))}
@@ -70,6 +99,8 @@ class App extends Component {
                 key={player.id}
                 name={player.name}
                 image={player.image}
+                image={player.image}
+                updatePlayerClickedValue = {this.updatePlayerClickedValue}
                 handleIncrement={this.handleIncrement}
               />
             ))}
@@ -81,6 +112,8 @@ class App extends Component {
                 key={player.id}
                 name={player.name}
                 image={player.image}
+                image={player.image}
+                updatePlayerClickedValue = {this.updatePlayerClickedValue}
                 handleIncrement={this.handleIncrement}
               />
             ))}
