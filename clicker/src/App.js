@@ -10,13 +10,16 @@ import PlayerCard from "./Components/PlayerCard";
 import ScoreCounter from "./Components/ScoreCounter";
 import AlreadyClickedModal from "./Components/AlreadyClickedModal";
 
-let Message = "";
+let count = 0;
+let topScore = 0;
+let Message = `Score: ${count} Top Score: ${topScore}`;
 
 class App extends Component {
   // Setting this.state.players to the players json array
   state = {
     players,
-    count: 0,
+    count,
+    topScore,
     Message
   }
 
@@ -36,10 +39,10 @@ class App extends Component {
       console.log(clickedPlayer);
       // We always use the setState method to update a component's state
       this.setState({ count: this.state.count + 1 });
+      this.setState({ Message: "Way to go! You haven't clicked that one yet. Keep clicking!" });
     }
 
     else {
-      alert("You already clicked that player. Now you have to start over.");
       this.setState({ Message: "You already clicked that player. Now you have to start over." });
       console.log(Message);
       this.setState({ count: 0});
@@ -65,10 +68,10 @@ class App extends Component {
   render() {
     return [
       <Navbar
+        count={this.state.count}
         Message={this.state.Message}  
       />,
-      <Jumbotron 
-        count={this.state.count} 
+      <Jumbotron  
       />,
       <Container>
 
