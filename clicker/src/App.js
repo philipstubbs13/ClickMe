@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Navbar from "./Components/Navbar";
 import Jumbotron from "./Components/Jumbotron";
@@ -7,19 +7,36 @@ import Footer from "./Components/Footer";
 import Container from "./Components/Container";
 import players from "./players.json";
 import PlayerCard from "./Components/PlayerCard";
+import ScoreCounter from "./Components/ScoreCounter";
 
 
 class App extends Component {
   // Setting this.state.players to the players json array
   state = {
-    players
+    players,
+    count: 5
   }
+
+  // handleIncrement increases this.state.count by 1
+  handleIncrement = () => {
+    // We always use the setState method to update a component's state
+    this.setState({ count: this.state.count + 1 });
+  };
+
 
   render() {
     return [
       <Navbar />,
       <Jumbotron />,
       <Container>
+        <div className="row">
+          <div className="col-md-12">
+            <ScoreCounter 
+              count={this.state.count}
+              handleIncrement={this.handleIncrement} 
+            />
+          </div>
+        </div>
         <div className="row">
           <div className="col-md-3">
             {this.state.players.slice(0,3).map(player => (
@@ -32,7 +49,7 @@ class App extends Component {
             ))}
           </div>
           <div className="col-md-3">
-            {this.state.players.slice(4,7).map(player => (
+            {this.state.players.slice(3,6).map(player => (
               <PlayerCard
                 id={player.id}
                 key={player.id}
@@ -42,7 +59,7 @@ class App extends Component {
             ))}
           </div>
           <div className="col-md-3">
-            {this.state.players.slice(5,8).map(player => (
+            {this.state.players.slice(6,9).map(player => (
               <PlayerCard
                 id={player.id}
                 key={player.id}
