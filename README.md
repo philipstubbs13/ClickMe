@@ -27,7 +27,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
 <img src="readme_images/already_clicked.png">
 <br>
 <br>
-<img src="readme_ages/you_won.png">
+<img src="readme_images/you_won.png">
 
 ## <a name="about-this-project"></a> About this project
 
