@@ -19,6 +19,8 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 ## <a name="live"></a>Live
 
+<https://clickme-game.herokuapp.com/>
+
 ## <a name="screenshots"></a> Screenshots
 
 <img src="readme_images/game_start.png">
@@ -49,7 +51,7 @@ For more information on how this project is structured and broken into various c
 
 The following section will take you through the steps of setting up this application and getting it running locally on your computer.
 
-If you don't want to set up this project locally and just want to see the deployed application, go to <insert URL link here>.
+If you don't want to set up this project locally and just want to see the deployed application, go to <https://clickme-game.herokuapp.com/>.
 
 To set up this application locally on your computer, perform the following steps:
 
