@@ -12,6 +12,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
 * [Screenshots](#screenshots)
 * [About this project](#about-this-project)
 * [Getting started](#getting-started)
+* [Deployment](#react-deployment)
 * [Technologies used to create app](#technologies-used)
   * [Backend technologies](#Backend)
   * [Frontend technologies](#Frontend)
@@ -108,6 +109,10 @@ yarn start
 </pre>
 
 <p>To verify that the application has started and is working locally on your computer, open Chrome and go to <a href="http://localhost:3000">http://localhost:3000</a>.</p>
+
+## <a name="react-deployment"></a> Deployment
+
+To deploy your react app to Heroku, see [Deploying React with Zero Configuration](https://blog.heroku.com/deploying-react-with-zero-configuration).
 
 ## <a name="technologies-used"></a> Technologies used to build app
 
