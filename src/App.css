@@ -8,9 +8,22 @@
     opacity: 0.8
   }
 
+  /*Font size of game message text in top navigation bar*/
   .game-message {
-    font-size: 18px;
+    font-size: 22px;
   }
+
+  /*Sticky footer*/
+.Site {
+  /* display: flex; */
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.main-content-section {
+  flex: 1;
+  min-height: 100vh;
+}
 
 
   
