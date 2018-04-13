@@ -47,7 +47,7 @@ For a high level overview of React, check out this video: <https://www.youtube.c
 
 The React documentation is available at <https://reactjs.org/>.
 
-For more information on how this project is structured and broken into various components, see [Structure of the project](#structure-of-project)
+For more information on how this project is structured and broken into various components, see [Structure of the project](#structure-of-project).
 
 ## <a name="getting-started"></a> Getting started
 
@@ -99,7 +99,7 @@ The first step is to clone the project repository to a local directory on your c
 
 <p>If you don't already have Node.js installed on your computer, you can install the latest version here: <https://nodejs.org/en/>.</p>
 
-### <a name="install-yarn></a> 3. Install yarn
+### <a name="install-yarn"></a> 3. Install yarn
 To be able to install the dependencies and start the application locally, you will need to install yarn. Yarn is a package manager like npm.
 
 To install yarn, run the following command:
