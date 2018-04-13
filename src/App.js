@@ -70,7 +70,7 @@ class App extends Component {
       console.log(players);
     }
 
-    //if user clicks all images without clicking on an image more than once (that is, count = 12), the user won.
+    //if user clicks all images without clicking on an image more than once (that is, count = 11), the user won.
     if (this.state.count === 11) {
       //Update the game message to tell the user that they won. Reset the game.
       this.setState({ Message: "You won! Bet you can't do it again." });
