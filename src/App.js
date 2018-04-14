@@ -69,9 +69,7 @@ class App extends Component {
       });
       //console.log(Message);
       //For every player, set the clicked value back to false.
-      for (let i = 0; i < players.length; i++) {
-        players[i].clicked = "false";
-      }
+      players.forEach(player => player.clicked = "false");
       console.log(players);
     }
 
@@ -86,9 +84,7 @@ class App extends Component {
         topScore: this.state.count
       });
       //For every player, set the clicked value back to false.
-      for (let i = 0; i < players.length; i++) {
-        players[i].clicked = "false";
-      }
+      players.forEach(player => player.clicked = "false");
       console.log(players);
     }
 
