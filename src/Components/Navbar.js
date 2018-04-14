@@ -1,5 +1,4 @@
 import React from "react";
-// import ScoreCounter from "./ScoreCounter";
 
 const Navbar = props => (
     <nav className="navbar navbar-expand-lg navbar-light bg-primary navbar-default navbar-fixed-top mb-4">

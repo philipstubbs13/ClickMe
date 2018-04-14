@@ -87,7 +87,6 @@ class App extends Component {
 
     //Randomize 
     //Every time an image is clicked, the images rendered to the page shuffle themselves in a random order.
-    //https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
     for (let i = players.length - 1; i > 0; i--) {
       let j = Math.floor(Math.random() * (i + 1));
       [players[i], players[j]] = [players[j], players[i]];
@@ -106,6 +105,7 @@ class App extends Component {
       />,
 
       //Container component that holds all the clickable player images.
+      //we are passing 5 props into each PlayerCard component: id, key, name, image, and updatePlayerClickedValue.
       <Container>
 
         <div className="row">
