@@ -47,9 +47,11 @@ class App extends Component {
       console.log(clickedPlayer);
       //Use the setState method to update a component's state. 
       //Update the count - number of correct guesses/clicks without clicking an image twice.
-      this.setState({ count: this.state.count + 1 });
       //Update the game message in the top navigation bar.
-      this.setState({ Message: "Way to go! You haven't clicked that one yet. Keep clicking!" });
+      this.setState({
+        count: this.state.count + 1,
+        Message: "Way to go! You haven't clicked that one yet. Keep clicking!" 
+      });
       console.log(this.state.count);
     }
 
@@ -57,12 +59,15 @@ class App extends Component {
     else if (clickedPlayer[0].clicked === "true") 
     {
       //Update the game message to tell the user that the player has already been clicked. Reset the game.
-      this.setState({ Message: "You already clicked that player. Now you have to start over." });
-      console.log(Message);
       //Update the count - number of correct clicks - back to 0 to reset the game.
-      this.setState({ count: 0});
       //Update the top score.
-      this.setState({ topScore: this.state.count + 1});
+      this.setState({ 
+        Message: "You already clicked that player. Now you have to start over.",
+        count: 0,
+        topScore: this.state.count + 1
+
+      });
+      //console.log(Message);
       //For every player, set the clicked value back to false.
       for (let i = 0; i < players.length; i++) {
         players[i].clicked = "false";
@@ -73,11 +78,13 @@ class App extends Component {
     //if user clicks all images without clicking on an image more than once (that is, count = 11), the user won.
     if (this.state.count === 11) {
       //Update the game message to tell the user that they won. Reset the game.
-      this.setState({ Message: "You won! Bet you can't do it again." });
       //Update the count - number of correct clicks - back to 0 to reset the game.
-      this.setState({ count: 0});
       //Update the top score.
-      this.setState({ topScore: this.state.count});
+      this.setState({ 
+        Message: "You won! Bet you can't do it again.",
+        count: 0,
+        topScore: this.state.count
+      });
       //For every player, set the clicked value back to false.
       for (let i = 0; i < players.length; i++) {
         players[i].clicked = "false";
