@@ -1,19 +1,16 @@
+.navbar {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  opacity: 0.8
+}
 
-/*Navbar*/
-  .navbar {
-    top: 0;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-    opacity: 0.8
-  }
+.game-message {
+  font-size: 22px;
+}
 
-  /*Font size of game message text in top navigation bar*/
-  .game-message {
-    font-size: 22px;
-  }
-
-  /*Sticky footer*/
+/* Sticky footer */
 .Site {
   /* display: flex; */
   min-height: 100vh;
@@ -23,6 +20,10 @@
 .main-content-section {
   flex: 1;
   min-height: 100vh;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 
