@@ -8,9 +8,7 @@ export const Footer = () => (
               <div className="card-body footer-body text-white">
                   <h2 className="text-white">ClickMe</h2>
                   <a href="https://github.com/philipstubbs13/ClickMe" className="btn btn-dark text-white" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
-                  <a href="https://www.linkedin.com/in/philipjstubbs/" className="btn btn-dark ml-3 text-white" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                  <br></br>
-                  <br></br>
+                  <a href="https://www.linkedin.com/in/philipjstubbs/" className="btn btn-dark ms-3 text-white" target="_blank" rel="noopener noreferrer">LinkedIn</a>
               </div>
           </div>
       </div>

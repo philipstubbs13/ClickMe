@@ -7,4 +7,10 @@
   border-color: dodgerblue;
 }
 
+.img-container:hover {
+  cursor: pointer;
+}
+
+
+
 

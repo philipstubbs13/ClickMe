@@ -6,12 +6,13 @@ import { Footer } from "./components/footer/Footer";
 import { Container }  from "./components/container/Container";
 import players from "./players.json";
 import { PlayerCard } from "./components/player-card/PlayerCard";
+import { initialMessage, imageNotClickedMessage, imageAlreadyClickedMessage, youWonMessage } from './constants/messages';
 
 export const App = () => {
   const [count, setCount] = useState(0); // Keeps track of number of correct guesses/clicks without clicking an image twice.
   const [topScore, setTopScore] = useState(0); // Keeps track of user's top score.
   // Various messages that the user will see in the top navigation bar when playing the game.
-  const [message, setMessage] = useState("Click an image to earn points but don't click an image more than once.");
+  const [message, setMessage] = useState(initialMessage);
 
   // Run updatePlayerClickedValue when user clicks on an image.
   const updatePlayerClickedValue = id => {
@@ -28,7 +29,7 @@ export const App = () => {
       // Update the count - number of correct guesses/clicks without clicking an image twice.
       // Update the game message in the top navigation bar.
       setCount(count => count + 1);
-      setMessage("Way to go! You haven't clicked that one yet. Keep clicking!");
+      setMessage(imageNotClickedMessage);
     }
 
     // if the player has already clicked the image once already, then
@@ -36,7 +37,7 @@ export const App = () => {
       // Update the game message to tell the user that the player has already been clicked. Reset the game.
       // Update the count - number of correct clicks - back to 0 to reset the game.
       // Update the top score.
-      setMessage('You already clicked that player. Now you have to start over.')
+      setMessage(imageAlreadyClickedMessage)
       setCount(0);
       setTopScore(count + 1)
 
@@ -49,7 +50,7 @@ export const App = () => {
       // Update the game message to tell the user that they won. Reset the game.
       // Update the count - number of correct clicks - back to 0 to reset the game.
       // Update the top score.
-      setMessage('You won! Bet you cannot do it again.');
+      setMessage(youWonMessage);
       setCount(0);
       setTopScore(count);
 
@@ -70,7 +71,7 @@ export const App = () => {
       <Navbar
         count={count}
         message={message}  
-        topScore ={topScore}
+        topScore={topScore}
       />
         <Container>
           <div className="row">
