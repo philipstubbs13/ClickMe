@@ -16,7 +16,7 @@ Each time you click a player, your score goes up by one. If you click a player t
 
 ## <a name="live"></a>Live
 
-<https://clickme-d27eb.firebaseapp.com/>
+<https://clickme-d27eb.web.app/>
 
 ## <a name="screenshots"></a> Screenshots
 
@@ -41,7 +41,7 @@ This project is built using React. For more information on how this project is s
 
 The following section will take you through the steps of setting up this application and getting it running locally on your computer.
 
-If you don't want to set up this project locally and just want to see the deployed application, go to <https://clickme-d27eb.firebaseapp.com/>.
+If you don't want to set up this project locally and just want to see the deployed application, go to <https://clickme-d27eb.web.app/>.
 
 To set up this application locally on your computer, perform the following steps:
 
@@ -133,7 +133,7 @@ npm install -g firebase-tools
 * Log in to Firebase:
 
 ```bash
-firebase login
+firebase login --interactive
 ```
 
 Note that if you were already logged in, you might need to reauth instead:
@@ -154,7 +154,7 @@ yarn build
 firebase deploy
 ```
 
-Verify deploy was successful by navigating to [hosting URL](https://clickme-d27eb.firebaseapp.com).
+Verify deploy was successful by navigating to [hosting URL](https://clickme-d27eb.web.app/).
 
 ## <a name="technologies-used"></a> Technologies used to build app
 
