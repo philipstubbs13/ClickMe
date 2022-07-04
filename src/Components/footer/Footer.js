@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 export const Footer = () => (
   <div className="row mt-5">
       <div className="col-md-12">

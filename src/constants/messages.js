@@ -1,4 +1,4 @@
-export const initialMessage = "Click an image to earn points but don't click an image more than once.";
-export const imageNotClickedMessage = "Way to go! You haven't clicked that one yet. Keep clicking!";
-export const imageAlreadyClickedMessage = "You already clicked that player. Now you have to start over.";
-export const youWonMessage = "You won! Bet you cannot do it again.";
+export const initialMessage = "Click a player to earn points but don't click a player more than once.";
+export const playerNotClickedMessage = "Way to go! You haven't clicked that one yet. Keep clicking!";
+export const playerAlreadyClickedMessage = "You already clicked that player. Now you have to start over.";
+export const youWonMessage = "You won! Bet you can't do it again.";

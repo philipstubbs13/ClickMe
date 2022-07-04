@@ -1,4 +1,3 @@
-// @ts-nocheck
 import "./PlayerCard.css";
 
 export const PlayerCard = props => (

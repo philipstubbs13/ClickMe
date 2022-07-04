@@ -1,4 +1,3 @@
-// @ts-nocheck
 export const Navbar = (props) => (
   <nav className="navbar navbar-expand-lg navbar-light bg-primary navbar-default navbar-fixed-top mb-4">
       <div className="container">
