@@ -10,6 +10,7 @@ Each time you click a player, your score goes up by one. If you click a player t
 * [Screenshots](#screenshots)
 * [About this project](#about-this-project)
 * [Getting started](#getting-started)
+* [Testing](#testing)
 * [Deployment](#react-deployment)
 * [Technologies used to create app](#technologies-used)
 * [Issues](#Issues)
@@ -116,6 +117,26 @@ yarn start
 ```
 
 To verify that the application has started and is working locally on your computer, open Chrome and go to <http://localhost:3000>.
+
+## <a name="testing"></a> Testing
+
+This project uses the `jest` test runner.  In addition, for testing components in isolation, this project uses `react-testing-library`, which
+is a library for testing React components in a way that resembles the way the components are used by end users.
+
+To run the tests for this project, run the following command from the project root directory:
+
+```bash
+yarn test
+```
+
+This command launches `jest` in watch mode (that is, every time you save a file, it will re-run the tests).
+
+To generate a test coverage report for this project, run the following command from the project root directory:
+
+```bash
+yarn coverage
+```
+
 
 ## <a name="react-deployment"></a> Deployment
 
