@@ -184,6 +184,8 @@ Verify deploy was successful by navigating to [hosting URL](https://clickme-d27e
 * [Bootstrap](http://getbootstrap.com/)
 * Javascript
 * [React](https://reactjs.org/)
+* [jest](https://jestjs.io/)
+* [react-testing-library](https://testing-library.com/docs/react-testing-library/intro/)
 
 ## <a name ="Issues"></a> Issues
 
