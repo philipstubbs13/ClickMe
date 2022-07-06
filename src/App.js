@@ -4,21 +4,22 @@ import { Footer } from "./components/footer/Footer";
 import { Container }  from "./components/container/Container";
 import { PlayerCard } from "./components/player-card/PlayerCard";
 import { useGameContext } from './hooks/useGameContext';
+import { SET_CLICKED_TO_TRUE, LOST_GAME, WON_GAME }  from './constants/actions';
 
 export const App = () => {
   const { players, message, score, topScore, dispatch } = useGameContext()
 
   const onClickPlayer = player => {
     if (player.clicked === 'false') {
-      dispatch({ type: 'SET_CLICKED_TO_TRUE', payload: player })
+      dispatch({ type: SET_CLICKED_TO_TRUE, payload: player })
     }
 
     if (player.clicked === 'true') {
-      dispatch({ type: 'LOST_GAME', payload: player })
+      dispatch({ type: LOST_GAME, payload: player })
     }
 
     if (score === 11) {
-      dispatch({ type: 'WON_GAME' })
+      dispatch({ type: WON_GAME })
     }
 
     // Randomize - every time a player is clicked, shuffle players in random order.
