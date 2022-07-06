@@ -3,7 +3,7 @@ export const Navbar = (props) => (
       <div className="container">
           <h1 className="text-white">ClickMe</h1>
           <span className="game-message text-white navbar-text">{props.message}</span>
-          <span className="text-white navbar-text">Score: {props.count}  |  Top Score: {props.topScore}</span>
+          <span className="text-white navbar-text">Score: {props.score}  |  Top Score: {props.topScore}</span>
       </div>
   </nav>
 );

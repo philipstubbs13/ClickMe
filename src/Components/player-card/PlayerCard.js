@@ -3,10 +3,10 @@ import "./PlayerCard.css";
 export const PlayerCard = props => (
   <div className="img-container img-fluid mt-5">
     <img
-      alt={props.name}
-      src={props.image}
-      data-id={props.id}
-      onClick={() => props.updatePlayerClickedValue(props.id)}
+      alt={props.player.name}
+      src={props.player.image}
+      data-id={props.player.id}
+      onClick={props.onClickPlayer}
     />  
   </div>
 );

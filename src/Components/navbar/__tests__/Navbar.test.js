@@ -1,9 +1,9 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { Navbar } from './Navbar';
+import { Navbar } from '../Navbar';
 
 const propsMock = {
-    count: 3,
+    score: 3,
     message: 'messageMock',
     topScore: 5,
 }
@@ -16,8 +16,8 @@ describe('when passed valid props', () => {
     })
 })
 
-describe('when #count is passed', () => {
-    test('should render #count', () => {
+describe('when #score is passed', () => {
+    test('should render #score', () => {
         render(<Navbar {...propsMock} />)
 
         expect(screen.getByText(/score: 3/i)).toBeInTheDocument()

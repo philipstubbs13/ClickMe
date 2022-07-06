@@ -1,13 +1,15 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { PlayerCard } from './PlayerCard';
+import { PlayerCard } from '../PlayerCard';
 import userEvent from '@testing-library/user-event';
 
 const propsMock = {
-    id: '5',
-    image: 'imageMock',
-    name: 'Tyler Herro',
-    updatePlayerClickedValue: jest.fn()
+    player: {
+        id: '5',
+        image: 'imageMock',
+        name: 'Tyler Herro',
+    },
+    onClickPlayer: jest.fn()
 }
 
 describe('when passed valid props', () => {
@@ -19,12 +21,11 @@ describe('when passed valid props', () => {
 })
 
 describe('when image is clicked', () => {
-    test('should call .updatePlayerClickedValue()', () => {
+    test('should call .onClickPlayer()', () => {
         render(<PlayerCard {...propsMock} />)
 
         userEvent.click(screen.getByAltText(/tyler herro/i));
 
-        expect(propsMock.updatePlayerClickedValue).toHaveBeenCalledWith(propsMock.id)
-        expect(propsMock.updatePlayerClickedValue).toHaveBeenCalledTimes(1);
+        expect(propsMock.onClickPlayer).toHaveBeenCalledTimes(1);
     })
 })
