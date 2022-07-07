@@ -1,8 +1,8 @@
 import './App.css';
-import { Navbar } from "./components/navbar/Navbar";
-import { Footer } from "./components/footer/Footer";
-import { Container }  from "./components/container/Container";
-import { PlayerCard } from "./components/player-card/PlayerCard";
+import { Navbar } from "./Components/navbar/Navbar";
+import { Footer } from "./Components/footer/Footer";
+import { Container }  from "./Components/container/Container";
+import { PlayerCard } from "./Components/player-card/PlayerCard";
 import { useGameContext } from './hooks/useGameContext';
 import { setClickedToTrue, updateLostGame, updateWonGame } from './reducers/actionCreators';
 import { shufflePlayers } from './utils/shufflePlayers';

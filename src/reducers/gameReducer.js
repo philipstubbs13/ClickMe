@@ -15,7 +15,7 @@ export const gameReducer = (state, action) => {
             return {
                 ...state,
                 message: playerNotClickedMessage,
-                score: state.score++,
+                score: state.score + 1,
                 players: updatedPlayers,
             }
         case LOST_GAME:
