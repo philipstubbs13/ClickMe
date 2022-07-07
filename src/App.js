@@ -1,7 +1,7 @@
 import './App.css';
 import { Navbar } from "./Components/navbar/Navbar";
 import { Footer } from "./Components/footer/Footer";
-import { Container }  from "./Components/container/Container";
+import { Container }  from "./Components/Container/Container";
 import { PlayerCard } from "./Components/player-card/PlayerCard";
 import { useGameContext } from './hooks/useGameContext';
 import { setClickedToTrue, updateLostGame, updateWonGame } from './reducers/actionCreators';
