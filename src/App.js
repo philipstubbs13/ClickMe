@@ -4,29 +4,27 @@ import { Footer } from "./components/footer/Footer";
 import { Container }  from "./components/container/Container";
 import { PlayerCard } from "./components/player-card/PlayerCard";
 import { useGameContext } from './hooks/useGameContext';
-import { SET_CLICKED_TO_TRUE, LOST_GAME, WON_GAME }  from './constants/actions';
+import { setClickedToTrue, updateLostGame, updateWonGame } from './reducers/actionCreators';
+import { shufflePlayers } from './utils/shufflePlayers';
 
 export const App = () => {
   const { players, message, score, topScore, dispatch } = useGameContext()
 
   const onClickPlayer = player => {
     if (player.clicked === 'false') {
-      dispatch({ type: SET_CLICKED_TO_TRUE, payload: player })
+      dispatch(setClickedToTrue(player))
     }
 
     if (player.clicked === 'true') {
-      dispatch({ type: LOST_GAME, payload: player })
+      dispatch(updateLostGame(player))
     }
 
-    if (score === 11) {
-      dispatch({ type: WON_GAME })
+    if (score === players.length - 1) {
+      dispatch(updateWonGame())
     }
 
     // Randomize - every time a player is clicked, shuffle players in random order.
-    for (let i = players.length - 1; i > 0; i--) {
-      let j = Math.floor(Math.random() * (i + 1));
-      [players[i], players[j]] = [players[j], players[i]];
-    }
+    shufflePlayers(players)
   };
 
   return (
