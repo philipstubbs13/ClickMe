@@ -4,7 +4,7 @@ import { Footer } from "./Components/footer/Footer";
 import { Container }  from "./Components/Container/Container";
 import { PlayerCard } from "./Components/player-card/PlayerCard";
 import { useGameContext } from './hooks/useGameContext';
-import { setClickedToTrue, updateLostGame, updateWonGame } from './reducers/actionCreators';
+import { setClicked, updateLostGame, updateWonGame } from './reducers/actionCreators';
 import { shufflePlayers } from './utils/shufflePlayers';
 
 export const App = () => {
@@ -12,7 +12,7 @@ export const App = () => {
 
   const onClickPlayer = player => {
     if (player.clicked === 'false') {
-      dispatch(setClickedToTrue(player))
+      dispatch(setClicked(player))
     }
 
     if (player.clicked === 'true') {

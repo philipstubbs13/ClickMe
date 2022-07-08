@@ -1,6 +1,6 @@
 import { LOST_GAME, SET_CLICKED_TO_TRUE, WON_GAME } from "../constants/actions"
 
-export const setClickedToTrue = (player) => {
+export const setClicked = (player) => {
     return { type: SET_CLICKED_TO_TRUE, payload: player }
 }
 

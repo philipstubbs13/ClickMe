@@ -1,7 +1,7 @@
 import { initialMessage, playerAlreadyClickedMessage, playerNotClickedMessage, youWonMessage } from "../../constants/messages"
 import { gameReducer } from "../gameReducer"
 import defaultPlayers from "../../players.json";
-import { setClickedToTrue, updateLostGame, updateWonGame } from "../actionCreators";
+import { setClicked, updateLostGame, updateWonGame } from "../actionCreators";
 
 describe('gameReducer', () => {
     const initialStateMock = {
@@ -18,7 +18,7 @@ describe('gameReducer', () => {
             "image": "imageMock",
             "clicked": "false"
         }
-        const actionMock = setClickedToTrue(clickedPlayerMock)
+        const actionMock = setClicked(clickedPlayerMock)
 
         test('should update player clicked value to true', () => {
             const result = gameReducer(initialStateMock, actionMock)
