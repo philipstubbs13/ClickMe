@@ -1,7 +1,7 @@
-import { LOST_GAME, SET_CLICKED_TO_TRUE, WON_GAME } from "../constants/actions"
+import { LOST_GAME, SET_CLICKED, WON_GAME } from "../constants/actions"
 
 export const setClicked = (player) => {
-    return { type: SET_CLICKED_TO_TRUE, payload: player }
+    return { type: SET_CLICKED, payload: player }
 }
 
 export const updateLostGame = (player) => {

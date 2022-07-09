@@ -1,9 +1,9 @@
 import { playerNotClickedMessage, playerAlreadyClickedMessage, youWonMessage } from '../constants/messages';
-import { LOST_GAME, SET_CLICKED_TO_TRUE, WON_GAME } from "../constants/actions";
+import { LOST_GAME, SET_CLICKED, WON_GAME } from "../constants/actions";
 
 export const gameReducer = (state, action) => {
     switch (action.type) {
-        case SET_CLICKED_TO_TRUE:            
+        case SET_CLICKED:            
             const updatedPlayers = state.players.reduce((sum, currentPlayer) => {
                 if (currentPlayer.id === action.payload.id) {
                     return [...sum, { ...currentPlayer, clicked: 'true' }]

@@ -1,6 +1,6 @@
 # ClickMe
 
-Test your memory of current NBA players with the ClickMe game. ClickMe is a memory skill application built using React. The objective of the game is to be able to go through and click each player once.
+Test your memory of NBA players with the ClickMe game. ClickMe is a memory skill application built using React. The objective of the game is to be able to go through and click each player once.
 
 Each time you click a player, your score goes up by one. If you click a player twice, you lose and your score goes back to 0.
 
@@ -32,7 +32,7 @@ Each time you click a player, your score goes up by one. If you click a player t
 
 ### <a name="how-app-works"></a> How the app works
 
-When you open the application, you will see 12 players. To start the game, click a player. Each player in the `players.json` file has a property named `clicked`. By default, each player starts out with a clicked value of `false`. When you click a player, the clicked value for that player is set to `true`. The object of the game is to click every player once. When you click a player for the first time, your score goes up by one. But, if you click a player more than once (that is, click a player with a clicked value of `true`), the score will reset, and you have to start over. When the game is reset, each player's clicked value is set back to `false`. You win the game when you click each player on the screen once (that is, every player in `players.json` has a clicked value of `true`).
+When you open the application, you will see 12 players. To start the game, click a player. Each player in the `players.json` file has a property named `clicked`. By default, each player starts out with a `clicked` value of `false`. When you click a player, the `clicked` value for that player is set to `true`. The object of the game is to click every player once. When you click a player for the first time, your score goes up by one. But, if you click a player more than once (that is, click a player with a clicked value of `true`), the score will reset, and you have to start over. When the game is reset, each player's clicked value is set back to `false`. You win the game when you click each player on the screen once (that is, every player in `players.json` has a clicked value of `true`).
 
 ### <a name="how-the-app-is-built"></a> How the app is built
 
@@ -72,10 +72,10 @@ After you clone the repository, navigate to the project root directory (ClickMe)
 * **public**: The public folder contains the `index.html` file. This HTML file is a template. The file is empty. So, if you open it directly in a browser, you will get an empty page. Rather than placing the HTML directly in `index.html`, this application uses a React component based architecture to create, build, and render UI components.
 
 * **src**: In the src folder, these are the parts of the application to pay attention to.
-  * **index.js:** The `index.js` file is the top level file of the React application. In `index.js`, the `App.js` file is imported, and the `ReactDOM.createRoot` method is used to render the app.
-  * **App.js:** The `App.js` file is where the application components are imported and rendered, such as the navigation bar, footer, and player images. This component handles the various states of the game, including the score, top score, a player's clicked value, and the game message displayed in the top navigation bar.
+  * **index.js:** The `index.js` file is the top level file of the React application. In `index.js`, the `App.js` file is imported, and the `ReactDOM.createRoot` method is used to render the app. Also, to manage all of the game state and logic, this application uses React's `useContext` hook. So, in this file, you will see the `App` component wrapped in a `GameContextProvider`.
+  * **App.js:** The `App.js` file is where the application components are imported and rendered, such as the navigation bar, footer, and player images. This component gets the various pieces of state from the `useContext` hook. State needed for this game includes the score, top score, a player's clicked value, and message displayed in the top navigation bar.
   * **components:** The components folder is where the app components are located. Each folder represents a separate component. For example, `navbar` is the top navigation bar component.
-  * **players.json:** The `players.json` file contains an array of objects. Each object is a player that gets rendered to the page. Each object contains four properties( `id`, `name`, `image`, and `clicked`). By default, `clicked` is set to `false`. When the user clicks a player, that player's clicked value gets set to `true` so that the application can keep track of which players have already been clicked and which players have not been clicked.
+  * **players.json:** The `players.json` file contains an array of objects. Each object is a player that gets rendered to the page. Each object contains four properties( `id`, `name`, `image`, and `clicked`). By default, `clicked` is set to `false`. When the user clicks a player, that player's clicked value gets set to `true` so that the application can keep track of which players have already been clicked and which players have not been clicked. Player state is updated using the `useContext` and `useReducer` hooks from React.
   * **package.json**: Lists the project dependencies and their version numbers.
   * **.gitignore**: Anything listed inside this file (for example, `node_modules`) will not be tracked by GitHub when code is committed.
   * **yarn.lock**: Dependency tree for the project. Lists all the dependencies and their versions.
@@ -137,12 +137,16 @@ To generate a test coverage report for this project, run the following command f
 yarn coverage
 ```
 
+Tests are located in a `__tests__` folder next to the code/file the tests are testing.
+
 
 ## <a name="react-deployment"></a> Deployment
 
 This app is deployed and hosted using Firebase hosting.
 
-To deploy this app, perform the following steps:
+This project uses GitHub Actions to automatically deploy the app to production when a pull request is merged into `main`.
+
+To manually deploy this app, perform the following steps:
 
 * Navigate to the root directory (ClickMe) of this project.
 * If not already installed, install the Firebase CLI tools globally:
